@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders</title>
+    <style>
+        /* BASE STYLES */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #fff;
+            color: #111;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* HEADER / NAV SIMULATION */
+        .nav-placeholder {
+            background-color: #232f3e;
+            height: 60px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .main-container {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* BREADCRUMBS / TITLE */
+        .breadcrumb {
+            font-size: 14px;
+            color: #565959;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 400;
+            margin: 0 0 20px 0;
+        }
+
+        /* TABS */
+        .tabs {
+            border-bottom: 1px solid #D5D9D9;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .tab {
+            padding-bottom: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #565959;
+        }
+
+        .tab.active {
+            color: #111;
+            font-weight: 700;
+            border-bottom: 2px solid #e77600;
+        }
+
+        /* SEARCH SECTION */
+        .order-search {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .order-search input {
+            width: 250px;
+            height: 31px;
+            padding: 3px 10px;
+            border: 1px solid #a6a6a6;
+            border-radius: 3px 0 0 3px;
+            outline: none;
+        }
+
+        .order-search button {
+            height: 31px;
+            padding: 0 15px;
+            background: #333;
+            color: white;
+            border: 1px solid #333;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        /* ORDER CARD */
+        .order-card {
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .order-header {
+            background-color: #f0f2f2;
+            padding: 14px 18px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #565959;
+            border-bottom: 1px solid #D5D9D9;
+        }
+
+        .header-left {
+            display: flex;
+            gap: 40px;
+        }
+
+        .header-label {
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .header-value {
+            color: #111;
+            font-size: 13px;
+        }
+
+        .order-content {
+            padding: 18px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-img {
+            width: 90px;
+            height: 90px;
+            background-color: #f7f7f7; /* Placeholder color */
+            object-fit: contain;
+        }
+
+        .product-details {
+            flex-grow: 1;
+        }
+
+        .status-text {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+        }
+
+        .product-title {
+            font-size: 14px;
+            color: #007185;
+            text-decoration: none;
+        }
+
+        .product-title:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        /* ACTION BUTTONS */
+        .order-actions {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .action-btn {
+            width: 100%;
+            padding: 6px 0;
+            font-size: 13px;
+            background: #fff;
+            border: 1px solid #D5D9D9;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(213,217,217,.5);
+        }
+
+        .action-btn:hover {
+            background-color: #F7FAFA;
+        }
+
+        .yellow-btn {
+            background: #FFD814;
+            border-color: #FCD200;
+        }
+
+        .yellow-btn:hover {
+            background: #F7CA00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-placeholder"></div>
+
+    <div class="main-container">
+        <div class="breadcrumb">Your Account › Your Orders</div>
+        <h1>Your Orders</h1>
+
+        <div class="tabs">
+            <div class="tab active">Orders</div>
+            <div class="tab">Buy Again</div>
+            <div class="tab">Not Yet Shipped</div>
+            <div class="tab">Cancelled</div>
+        </div>
+
+        <div class="order-search">
+            <input type="text" placeholder="Search all orders">
+            <button>Search Orders</button>
+        </div>
+
+        <div class="order-card">
+            <div class="order-header">
+                <div class="header-left">
+                    <div>
+                        <span class="header-label">Order Placed</span>
+                        <span class="header-value">January 20, 2026</span>
+                    </div>
+                    <div>
+                        <span class="header-label">Total</span>
+                        <span class="header-value">$42.99</span>
+                    </div>
+                    <div>
+                        <span class="header-label">Ship To</span>
+                        <a href="#" class="header-value">John Doe</a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <span class="header-label">Order # 114-8273645-9283746</span>
+                </div>
+            </div>
+
+            <div class="order-content">
+                <div style="width: 90px; height: 90px; background: #eee; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #aaa; background-image: url(images/new\ 02.jpg); background-size: cover; background-position: -15%;"></div>
+                
+                <div class="product-details">
+                    <p class="status-text">Delivered yesterday</p>
+                    <a href="#" class="product-title">Wireless Noise Cancelling Headphones - Over-Ear Bluetooth Headset with Mic</a>
+                    <p style="font-size: 12px; color: #565959; margin-top: 5px;">Return window closed on Feb 22, 2026</p>
+                    
+                    <button class="action-btn yellow-btn" style="width: auto; padding: 5px 20px; margin-top: 10px;">Buy it again</button>
+                </div>
+
+                <div class="order-actions">
+                    <button class="action-btn">Track package</button>
+                    <button class="action-btn">Return or replace items</button>
+                    <button class="action-btn">Leave product review</button>
+                    <button class="action-btn">Write a seller feedback</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-card">
+            <div class="order-header">
+                <div class="header-left">
+                    <div>
+                        <span class="header-label">Order Placed</span>
+                        <span class="header-value">January 15, 2026</span>
+                    </div>
+                    <div>
+                        <span class="header-label">Total</span>
+                        <span class="header-value">$15.50</span>
+                    </div>
+                    <div>
+                        <span class="header-label">Ship To</span>
+                        <a href="#" class="header-value">John Doe</a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <span class="header-label">Order # 114-1234567-0000000</span>
+                </div>
+            </div>
+
+            <div class="order-content">
+                <div style="width: 90px; height: 90px; background: #eee; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #aaa; background-image: url(images/new\ 3.jpg); background-size:cover; "></div>
+                
+                <div class="product-details">
+                    <p class="status-text" style="color: #007600;">Arriving Monday</p>
+                    <a href="#" class="product-title">Stainless Steel Reusable Water Bottle - 32oz</a>
+                </div>
+
+                <div class="order-actions">
+                    <button class="action-btn yellow-btn">Track package</button>
+                    <button class="action-btn">View or edit order</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

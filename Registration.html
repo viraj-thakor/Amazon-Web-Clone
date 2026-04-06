@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registration</title>
+    <style>
+        
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #fff;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding-top: 14px;
+        }
+
+        .amazon-logo {
+            width: 103px;
+            margin-bottom: 18px;
+        }
+
+        
+        .auth-container {
+            width: 350px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px 26px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 28px;
+            margin: 0 0 18px 0;
+        }
+
+       
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            padding-left: 2px;
+            padding-bottom: 2px;
+        }
+
+        input {
+            width: 100%;
+            height: 31px;
+            padding: 3px 7px;
+            margin-bottom: 14px;
+            border: 1px solid #a6a6a6;
+            border-top-color: #949494;
+            border-radius: 3px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+       
+        input:focus {
+            border-color: #e77600;
+            box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+        }
+
+        .password-hint {
+            font-size: 12px;
+            color: #555;
+            margin: -10px 0 15px 0;
+        }
+
+        .password-hint i {
+            font-style: italic;
+            color: #0066c0;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+
+       
+        .btn-continue {
+            width: 100%;
+            padding: 6px 0;
+            font-size: 13px;
+            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+            border: 1px solid #a88734;
+            border-top-color: #947a25;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+        }
+
+        .btn-continue:hover {
+            background: linear-gradient(to bottom, #f5d78e, #eeb933);
+            border-color: #9c7e31;
+        }
+
+        .btn-continue:active {
+            background: #f0c14b;
+            box-shadow: 0 1px 3px rgba(0,0,0,.2) inset;
+        }
+
+        
+        .legal-notice {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-top: 18px;
+        }
+
+        a {
+            color: #0066c0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e7e7e7;
+            margin: 22px 0;
+        }
+
+        .footer-link {
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="amazon-logo">
+
+    <div class="auth-container">
+        <h1>Create account</h1>
+        
+        <form action="#">
+            <label for="user-name">Your name</label>
+            <input type="text" id="user-name" placeholder="First and last name" required>
+
+            <label for="user-email">Mobile number or email</label>
+            <input type="email" id="user-email" required>
+
+            <label for="user-pass">Password</label>
+            <input type="password" id="user-pass" placeholder="At least 6 characters" required>
+            <p class="password-hint"><i>i</i> Passwords must be at least 6 characters.</p>
+
+            <label for="user-pass-check">Re-enter password</label>
+            <input type="password" id="user-pass-check" required>
+
+            <button type="submit" class="btn-continue">Continue</button>
+        </form>
+
+        <p class="legal-notice">
+            By creating an account, you agree to Amazon's 
+            <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+        </p>
+
+        <hr>
+
+        <div class="footer-link">
+            Already have an account? <a href="#">Sign in </a>
+        </div>
+    </div>
+
+</body>
+</html>
